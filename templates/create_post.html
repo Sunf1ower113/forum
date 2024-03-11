@@ -1,0 +1,35 @@
+{{define "create_post"}}
+<div class="create_post_container">
+    <h1 class="create_post">Create a new post</h1>
+    <div class="new_post">
+        <form action="/post" method="POST">
+            <div class="post_title">
+                <div class="title_text">Title:</div>
+                <input class="title_input" type="text" id="title" name="title" />
+                <textarea class="body_input" type="body" id="body" name="body"
+                    placeholder="Write your post here..."></textarea>
+            </div>
+            <br><br>
+            <div class="category">
+                <ul class="category_ul">
+                    <a class="inscriptions">Select category</a><br><br>
+                    <form action="/">
+                        {{ range .Category }}
+                        <li class="category_li">
+                            <label>
+                                <input type="checkbox" id="{{.}}" name="category" value="{{.}}">
+                                {{.}}
+                            </label>
+                        </li>
+                        {{ end }}
+                        <br><br>
+                        <button class="button" type="submit" value="Submit">Post</button>
+                    </form>
+                </ul>
+            </div>
+            <br><br>
+
+        </form>
+    </div>
+</div>
+{{end}}

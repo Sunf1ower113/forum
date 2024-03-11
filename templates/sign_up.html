@@ -1,0 +1,39 @@
+{{ define "sign-up" }}
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet" />
+
+<div class="sign_container">
+  <h1 class="main_text">Welcome to Forum!</h1>
+  <div class="auth" style="overflow: hidden" style="resize: none">
+    <div class="auth">
+      <form action="/auth/register" method="POST" target="_self">
+        <div class="auth_sign">
+          <input class="sign_auth_div" type="text" id="name" name="username" placeholder="Username"></input>
+        </div>
+
+        <div class="auth_sign">
+          <input class="sign_auth_div" type="text" id="email" name="email" placeholder="Email"></input>
+        </div>
+
+        <div class="auth_sign">
+          <input class="sign_auth_div" type="password" id="password" name="password" placeholder="Password"></input>
+        </div>
+
+        <div id="passwordHelpBlock" class="password_rules">
+          Your password must be 8 characters long, contain letters, numbers or symbols, and must not contain spaces
+          or emoji.
+        </div>
+
+    </div>
+    
+    <div class="input_button">
+      <button class="button" type="submit" value="Submit">SIGN UP</button>
+    </div>
+    </form>
+
+  </div>
+</div>
+
+{{end}}

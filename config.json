@@ -1,0 +1,15 @@
+{
+    "listner": {
+        "protocol": "tcp",
+        "ip": "0.0.0.0",
+        "port": ":8000",
+        "idle_timeout": 30,
+        "write_timeout": 30,
+        "read_timeout": 30
+    },
+    "database": {
+        "db_driver": "sqlite3",
+        "db_name": "forum.db",
+        "config": "?_foreign_keys=on"
+    }
+}

@@ -1,0 +1,109 @@
+{{define "post"}}
+
+<div class="post">
+
+
+    <!-- Left column block -->
+    <div class="post_left">
+        <div class="username">{{.Post.Author.Username}}</div>
+        <div class="categories">
+            {{range .Post.Category}}
+            <div class="category"> {{.}}</div>
+            {{end}}
+        </div>
+        <div class="date">{{.Post.CreateTime}}</div>
+    </div>
+
+
+
+    <!-- Right column block  -->
+
+    <div class="post_right">
+
+        <div class="title">{{.Post.Title}}</div>
+        <div class="content">{{.Post.Content}}</div>
+
+
+        <div class="like_dislike">
+            <form action="/post/reaction/{{.Post.ID}}" method="post" target="_self">
+                <button class="like_btn" formmethod="POST" type="submit" name="status" value="1">
+                    like {{.Post.Like}}
+                </button>
+            </form>
+            <form action="/post/reaction/{{.Post.ID}}" method="post" target="_self">
+                <button class="dislike_btn" formmethod="POST" type="submit" name="status" value="-1">
+                    dislike {{.Post.Dislike}}
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Comment -->
+
+<div class="all_comments">
+    {{if ne .User.Username ""}}
+    <div class="comment_input">
+        <form action="/post/comment/{{.Post.ID}}" method="POST" target="_self">
+            
+            <textarea class="comment_body" type="body" id="textarea" name="comment"
+            placeholder="Write comment..."></textarea>
+            <button class="comment_btn" type="submit">Comment</button>
+            
+        </form>
+    </div>
+    {{end}}
+    
+    {{if ne .User.Username ""}}
+    <div class="h2">
+        <h2>Comments:</h2>
+    </div>
+
+    {{range .Post.Comment}}
+    <div class="comment">
+        <div class="username"> {{.Username}}</div>
+        <div class="content">{{.Content}}</div>
+
+        <div class="like_dislike">
+            <form action="/post/comment/reaction/{{.PostId}}" target="_self">
+                <button class="like_btn" formmethod="POST" type="submit" name="status" value="1">
+                    like {{.Like}}
+                </button>
+            </form>
+            <form action="/post/comment/reaction/{{.PostId}}" target="_self">
+                <button class="dislike_btn" formmethod="POST" type="submit" name="status" value="-1">
+                    dislike {{.Dislike}}
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="date">{{.CreateTime}}</div>
+    {{end}}
+
+    {{else}}
+    <div class="h2">
+        <h2>Comments:</h2>
+    </div>
+    {{range .Post.Comment}}
+    <div class="comment">
+        <div class="username"> {{.Username}}</div>
+        <div class="content">{{.Content}}</div>
+
+        <div class="like_dislike">
+            <button class="like_btn">like {{.Like}}</button>
+            <button class="dislike_btn">dislike {{.Dislike}}</button>
+        </div>
+        <div class="date">{{.CreateTime}}</div>
+    </div>
+    {{end}}
+
+    {{end}}
+
+
+</div>
+
+
+
+{{end}}

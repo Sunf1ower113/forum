@@ -1,0 +1,47 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/css/header.css" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/sing_in_up.css" />
+  <link rel="stylesheet" href="/static/css/error.css" />
+  <link rel="stylesheet" href="/static/css/create_post.css" />
+  <link rel="stylesheet" href="/static/css/allposts.css" />
+  <link rel="stylesheet" href="/static/css/post.css" />
+  <link rel="stylesheet" href="/static/css/adaptive.css" />
+
+
+  <title>Forum</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__text">
+      <a href="/">Forum.</a>
+    </div>
+    {{if ne .Template "error"}}
+    {{template "header" .}}
+    {{end}}
+  </nav>
+  {{if eq .Template "sign-up"}}
+  {{template "sign-up" .}}
+  {{else if eq .Template "sign-in"}}
+  {{template "sign-in" .}}
+  {{else if eq .Template "create_post"}}
+  {{template "create_post" .}}
+  {{else if eq .Template "post"}}
+  {{template "post" .}}
+  {{else if eq .Template "allposts"}}
+  {{template "allposts" .}}
+  {{else if eq .Template "error"}}
+  {{template "error" .}}
+  {{end}}
+</body>
+
+</html>
+{{end}}

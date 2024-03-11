@@ -1,0 +1,165 @@
+.navbar {
+  width: 100vw;
+  height: 250px;
+
+  background-color: rgb(154, 245, 245);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /* background-color: rgba(222, 222, 222, 0.97); */
+  /* border-radius: 0px 5px ; */
+  /* https://cssgenerator.org/box-shadow-css-generator.html */
+  -webkit-box-shadow: 0px 10px 10px 10px rgb(154, 245, 245);
+}
+
+.navbar__text {
+  display: inline-block;
+  font-size: 90px;
+  font-style: inherit;
+  font-weight: 520;
+  padding-left: 50px;
+}
+
+.logout_btn {
+  margin-right: 6rem;
+}
+
+.reg_btn {
+  margin-right: 6rem;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .navbar__text {
+    padding-left: 40px;
+    font-size: 85px;
+  }
+
+  .logout_btn {
+    margin-right: 5rem;
+  }
+
+  .reg_btn {
+    margin-right: 5rem;
+  }
+
+  .button {
+    width: 190px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .navbar__text {
+    padding-left: 30px;
+    font-size: 82.5px;
+  }
+
+  .logout_btn {
+    margin-right: 4rem;
+  }
+
+  .reg_btn {
+    margin-right: 4rem;
+  }
+
+  .button {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar__text {
+    padding-left: 20px;
+    font-size: 80px;
+  }
+
+  .logout_btn {
+    margin-right: 3rem;
+  }
+
+  .reg_btn {
+    margin-right: 3rem;
+  }
+
+  button {
+    padding: 5px;
+  }
+
+  .button {
+    width: 170px;
+  }
+}
+
+
+@media only screen and (max-width: 950px) {
+  .navbar__text {
+    padding-left: 10px;
+    font-size: 72.5px;
+  }
+
+  .log_btn,
+  .reg_btn,
+  .create_post_btn,
+  .logout_btn,
+  .button {
+
+    width: 160px;
+  }
+}
+
+@media only screen and (max-width: 836px) {
+  .navbar__text {
+    padding-left: 15px;
+    font-size: 70px;
+  }
+
+  .button {
+    width: 150px;
+  }
+
+  .log_btn,
+  .reg_btn,
+  .create_post_btn,
+  .logout_btn {
+    margin: 10px 10px;
+
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .navbar {
+    display: block;
+  }
+
+  .container {
+    margin-top: 20px;
+    min-height: auto !important;
+  }
+
+  .navbar__text {
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 0 !important;
+    padding-left: 0;
+    font-size: 60px;
+    width: 100%;
+  }
+
+  .button {
+    width: 150px;
+  }
+
+  .log_btn,
+  .reg_btn,
+  .create_post_btn,
+  .logout_btn {
+    margin: 10px 10px;
+    width: 120px;
+
+
+  }
+}

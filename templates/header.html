@@ -1,0 +1,15 @@
+{{define "header"}}
+<div class="container">
+  <div>
+    {{if eq .User.Username ""}}
+    <a href="/auth/login"><button class="log_btn">Sign in</button></a>
+    <a href="/auth/register"><button class="reg_btn">Sign up</button></a>
+    {{else}}
+    <form action="/post" method="get" id="create_post"></form>
+    <form action="/auth/logout" method="post" id="logout"></form>
+    <button type="submit" class="create_post_btn" form="create_post">Create post</button>
+    <button type="submit" class="logout_btn" form="logout">Log out</button>
+    {{end}}
+  </div>
+</div>
+{{end}}

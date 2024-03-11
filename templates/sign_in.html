@@ -1,0 +1,27 @@
+{{ define "sign-in" }}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet" />
+
+<div class="sign_container">
+  <h1 class="main_text">Please sign in to Forum</h1>
+  <div class="auth">
+    <form action="/auth/login" method="POST" target="_self">
+      <div class="auth_sign">
+        <input class="sign_auth_div" type="text" id="email" name="email" placeholder="Email" style="overflow: hidden"
+          style="resize: none"></input>
+      </div>
+
+      <div class="auth_sign">
+        <input class="sign_auth_div" type="password" id="password" name="password" placeholder="Password"
+          style="overflow: hidden" style="resize: none"></input>
+      </div>
+
+      <div class="input_buttons">
+        <button class="button" type="submit" value="Submit">SIGN IN</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{end}}

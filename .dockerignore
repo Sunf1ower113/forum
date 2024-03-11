@@ -1,0 +1,5 @@
+forum.db
+.gitignore
+.git
+*.md
+.dockerignore

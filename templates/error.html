@@ -1,0 +1,9 @@
+{{ define "error" }}
+<div class="error_page_status">
+    <br><br><br>
+    <h1>{{.StatusCode}}</h1>
+</div>
+<div class="error_page">
+    {{.StatusText}}
+</div>
+{{end}}

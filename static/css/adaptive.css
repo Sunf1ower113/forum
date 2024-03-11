@@ -1,0 +1,31 @@
+@media only screen and (max-width: 850px) {
+    .textareain {
+      width: 85vw;
+    }
+  
+    .splitter {
+      width: 90vw;
+    }
+  
+    /* .ascii {
+      max-width: 500px;
+    } */
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .textareain {
+      transition: 1s;
+      /* max-width: max-content; */
+      background-position-x: -75px;
+      padding-left: 25px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 70px;
+    }
+    .container {
+      font-size: 15px;
+    }
+  }

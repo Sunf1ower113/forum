@@ -1,0 +1,45 @@
+{{define "allposts"}}
+<br><br>
+<div class="category">
+    <ul class="category_ul">
+        <a class="inscriptions">Category</a><br><br>
+        <form action="/" method="POST">
+            {{ range .Category }}
+            <li class="category_li">
+                <label>
+                    <input type="checkbox" id="{{.}}" name="category" value="{{.}}">
+                    {{.}}
+                </label>
+            </li>
+            {{ end }}
+            <div>
+                <br><br>
+                <button class="button" type="submit" value="Submit">Search</button>
+            </div>
+        </form>
+    </ul>
+</div>
+
+{{ range .Posts }}
+<div class="post_post">
+
+    <br><br>
+    <a href="/post/{{.ID}}" class="post_item">
+        <div class="username">by {{.Author.Username}}</div>
+        <div class="categories">
+            {{range .Category}}
+            <div class="category"> {{.}}</div>
+            {{end}}
+        </div>
+        <div class="title">{{.Title}}</div>
+        <div class="content">{{.Content}}</div>
+
+        <div class="date">{{.CreateTime}}</div>
+    </a>
+    <br><br>
+
+</div>
+
+{{end}}
+
+{{end}}
