@@ -12,5 +12,5 @@ create and login users, save sesions, create and tag posts, comment posts, react
 [@sunf1ower113](https://github.com/Sunf1ower113)<br />
 
 ## Notes
-This is a graduation project from Alem School in the direction of backend developer for Go, completed on April 1, 2023. <br>
+This is a graduation project from Alem School GO Backend developer branch, completed on May 1, 2023. <br>
 The project was added in the form and with the errors that were in the code review to show progress since graduation.<br>
