@@ -1,7 +1,7 @@
 # Forum
-This is a graduation project from Alem School in the direction of backend developer for Go, completed on April 1, 2023. 
-The project was added in the form and with the errors that were in the code review to show progress since graduation.
-This project consists in creating a web forum that allows :
+This is a graduation project from Alem School in the direction of backend developer for Go, completed on April 1, 2023. <br>
+The project was added in the form and with the errors that were in the code review to show progress since graduation.<br>
+This project consists in creating a web forum that allows : <br>
 
 create and login users, save sesions, create and tag posts, comment posts, react to posts and comments, communicate by comments, filter posts
 ## Usage
